@@ -1,0 +1,29 @@
+### md5checksum and file size reports for when fastq data are first uploaded.
+### written by Levi Simons, Rachel Meyer, Hector Baez, Max Ogden, and Jim Jeffers for eDNA Explorer
+### for questions or comments write to uc.caledna@gmail.com or through github
+### started July 10, 2022
+
+### Assume fastq metadata already shared
+#### Before importing fastq files, check the files that will be imported match exactly to names in the uploaded metadata
+
+### (Jim needs to check the file names match up)
+
+### generate md5sum and store it so when we move things around we can check for corruption
+
+### at least check that the foward and reverse read files are the same length
+
+#option 1
+ls *gz > list.txt
+while read name;
+do
+  zcat $name | echo $((`wc -l`/4)) > filelines.txt
+done < list.txt
+
+#option 2
+for i in *.fastq.gz; do echo "$i" $(gunzip -c $i | echo `wc -l`/4 | bc -l); done
+
+# checks that the forward and reverse files are the same.
+
+## Jim will need to design a way to communicate to the user that the files have issues and need to be checked and reuploaded if the line numbers for R1 and R2 fastqs are not equivalent.
+
+
