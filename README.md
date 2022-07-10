@@ -1,2 +1,2 @@
-# ecoDASH
-Code repository for the ecoDASH project
+# eDNAExplorer
+Code repository for the eDNAExplorer
