@@ -11,18 +11,7 @@
 ### generate md5sum and store it so when we move things around we can check for corruption
 
 ### at least check that the foward and reverse read files are the same length
-
-#option 1
-ls *gz > list.txt
-while read name;
-do
-  zcat $name | echo $((`wc -l`/4)) > filelines.txt
-done < list.txt
-
-#option 2
-for i in *.fastq.gz; do echo "$i" $(gunzip -c $i | echo `wc -l`/4 | bc -l); done
-
-# checks that the forward and reverse files are the same.
+This script is located here: https://github.com/CALeDNA/eDNA_Explorer/blob/main/fastq_upload.R
 
 ## Jim will need to design a way to communicate to the user that the files have issues and need to be checked and reuploaded if the line numbers for R1 and R2 fastqs are not equivalent.
 
