@@ -19,3 +19,6 @@ Step 2. (Jim codes) option for downloading a csv or text file of the metadata th
  Link to metadata layers is here: https://docs.google.com/spreadsheets/d/1Q1pF6x-xNHHnI5Z1UphuJEHKz2J-buRz4uwv9zuVZKk/edit?usp=sharing
  Link to copy on metadata layers is here: https://docs.google.com/document/d/1PiPXPBVxLiBY7sudj8p1CYaIJ1eKZFKjawkFV_dP-8I/edit?usp=sharing
  
+ Step 3. User uploads fastq data
+   use the fastq_upload script that generated md5checksum and confirms forward and reverse sequence files are the same number of lines.
+ 
