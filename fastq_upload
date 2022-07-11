@@ -12,6 +12,8 @@
 
 ### at least check that the foward and reverse read files are the same length
 This script is located here: https://github.com/CALeDNA/eDNA_Explorer/blob/main/fastq_upload.R
+This script exports a tab-delimted text file containing:
+the name of the R1 and R2 fastq file pairs, the number of reads per file, and a check that the R1 and R2 file pairs have an equal number of reads
 
 ## Jim will need to design a way to communicate to the user that the files have issues and need to be checked and reuploaded if the line numbers for R1 and R2 fastqs are not equivalent.
 
